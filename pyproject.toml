@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "open-caesar"
+version = "0.1.0"
+description = "A lightweight, open-source city building prototype inspired by Caesar II."
+readme = "README.md"
+authors = [{name = "OpenCaesar contributors"}]
+license = {text = "MIT License"}
+requires-python = ">=3.10"
+dependencies = [
+    "pygame>=2.5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
